@@ -10,6 +10,15 @@ async function listLeads(req, res, next) {
   }
 }
 
+async function listLeadsMinimal(req, res, next) {
+  try {
+    const data = await leadService.listLeadsMinimal(req.user);
+    return successResponse(res, 200, 'Leads minimal list', { leads: data });
+  } catch (err) {
+    return next(err);
+  }
+}
+
 async function getLead(req, res, next) {
   try {
     const lead = await leadService.getLeadById(req.params.id, req.user);
@@ -75,6 +84,7 @@ async function deleteLead(req, res, next) {
 
 module.exports = {
   listLeads,
+  listLeadsMinimal,
   getLead,
   createLead,
   updateLead,

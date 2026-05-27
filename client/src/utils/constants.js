@@ -19,3 +19,15 @@ export const LEAD_SOURCES = [
 ];
 
 export const LEAD_SCORES = ['Hot', 'Warm', 'Cold'];
+
+export const QUOTATION_STATUSES = [
+  'Draft',
+  'Sent',
+  'Accepted',
+  'Rejected',
+  'Expired',
+];
+
+export const TASK_PRIORITIES = ['Low', 'Medium', 'High'];
+
+export const TASK_STATUSES = ['Pending', 'Completed', 'Overdue'];

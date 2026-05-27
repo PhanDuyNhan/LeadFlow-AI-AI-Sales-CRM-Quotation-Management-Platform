@@ -9,6 +9,9 @@ const healthRoutes = require('./src/routes/health.routes');
 const authRoutes = require('./src/routes/auth.routes');
 const leadRoutes = require('./src/routes/lead.routes');
 const aiRoutes = require('./src/routes/ai.routes');
+const quotationRoutes = require('./src/routes/quotation.routes');
+const taskRoutes = require('./src/routes/task.routes');
+const dashboardRoutes = require('./src/routes/dashboard.routes');
 const { notFoundHandler, errorHandler } = require('./src/middleware/error.middleware');
 
 const app = express();
@@ -26,8 +29,9 @@ app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadRoutes);
 app.use('/api/ai', aiRoutes);
-
-// Business modules (quotations, tasks, dashboard) mount here in later phases.
+app.use('/api/quotations', quotationRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

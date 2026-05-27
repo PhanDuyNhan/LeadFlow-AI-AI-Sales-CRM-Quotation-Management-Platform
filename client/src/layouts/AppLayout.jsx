@@ -6,6 +6,8 @@ import Button from '../components/common/Button';
 const navItems = [
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/leads', label: 'Leads' },
+  { to: '/quotations', label: 'Quotations' },
+  { to: '/tasks', label: 'Tasks' },
 ];
 
 export default function AppLayout() {

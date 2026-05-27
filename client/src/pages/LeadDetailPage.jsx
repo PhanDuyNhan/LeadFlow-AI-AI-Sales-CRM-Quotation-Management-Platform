@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import leadService from '../services/lead.service';
 import LeadForm from '../components/leads/LeadForm';
 import AILeadPanel from '../components/leads/AILeadPanel';
+import RelatedQuotations from '../components/quotations/RelatedQuotations';
 import Badge from '../components/common/Badge';
 import Button from '../components/common/Button';
 import LoadingSpinner from '../components/common/LoadingSpinner';
@@ -230,6 +231,8 @@ export default function LeadDetailPage() {
           </Section>
 
           <AILeadPanel lead={lead} onLeadUpdated={setLead} />
+
+          <RelatedQuotations leadId={lead._id} />
 
           <Section title="Notes">
             <form onSubmit={handleAddNote} className="space-y-2">

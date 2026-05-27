@@ -5,6 +5,10 @@ import DashboardPage from '../pages/DashboardPage';
 import LeadsPage from '../pages/LeadsPage';
 import LeadCreatePage from '../pages/LeadCreatePage';
 import LeadDetailPage from '../pages/LeadDetailPage';
+import QuotationsPage from '../pages/QuotationsPage';
+import QuotationCreatePage from '../pages/QuotationCreatePage';
+import QuotationDetailPage from '../pages/QuotationDetailPage';
+import TasksPage from '../pages/TasksPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicOnlyRoute from './PublicOnlyRoute';
@@ -26,6 +30,10 @@ export default function AppRoutes() {
           <Route path="/leads" element={<LeadsPage />} />
           <Route path="/leads/create" element={<LeadCreatePage />} />
           <Route path="/leads/:id" element={<LeadDetailPage />} />
+          <Route path="/quotations" element={<QuotationsPage />} />
+          <Route path="/quotations/create" element={<QuotationCreatePage />} />
+          <Route path="/quotations/:id" element={<QuotationDetailPage />} />
+          <Route path="/tasks" element={<TasksPage />} />
         </Route>
       </Route>
 

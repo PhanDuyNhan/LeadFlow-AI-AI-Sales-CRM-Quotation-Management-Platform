@@ -16,6 +16,7 @@ const router = express.Router();
 router.use(protect);
 
 router.get('/', listQueryRules, handleValidation, leadController.listLeads);
+router.get('/minimal', leadController.listLeadsMinimal);
 router.post('/', createLeadRules, handleValidation, leadController.createLead);
 router.get('/:id', idParamRules, handleValidation, leadController.getLead);
 router.put('/:id', updateLeadRules, handleValidation, leadController.updateLead);

@@ -86,6 +86,13 @@ async function listLeads(user, queryParams = {}) {
   };
 }
 
+async function listLeadsMinimal(user) {
+  const filters = scopeQuery(user);
+  return Lead.find(filters, { _id: 1, customerName: 1, status: 1 })
+    .sort({ customerName: 1 })
+    .lean();
+}
+
 async function getLeadById(id, user) {
   const lead = await Lead.findById(id).populate(POPULATE_FIELDS);
   if (!lead) throw notFound();
@@ -220,6 +227,7 @@ async function deleteLead(id, user) {
 
 module.exports = {
   listLeads,
+  listLeadsMinimal,
   getLeadById,
   createLead,
   updateLead,
