@@ -342,22 +342,22 @@ review, mobile responsiveness audit, documentation, and manual test checklists.
 
 ### README & Deployment (Task Group 19)
 
-- [ ] T152 Update `server/.env.example` with all final required variable names and comments
-- [ ] T153 [P] Update `client/.env.example` with `VITE_API_URL` comment
-- [ ] T154 Write root `README.md` covering: project overview, tech stack, folder structure, prerequisites, local setup steps (matching `quickstart.md`), available scripts, environment variables reference, deployment guide (Vercel frontend + Render backend + MongoDB Atlas)
-- [ ] T155 [P] Add `client/vercel.json` with SPA rewrite rule: `{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }` for React Router compatibility on Vercel
-- [ ] T156 [P] Add `start` script to `server/package.json`: `"start": "node server.js"` for Render/Railway production deployment
+- [X] T152 Update `server/.env.example` with all final required variable names and comments
+- [X] T153 [P] Update `client/.env.example` with `VITE_API_URL` comment
+- [X] T154 Write root `README.md` covering: project overview, tech stack, folder structure, prerequisites, local setup steps (matching `quickstart.md`), available scripts, environment variables reference, deployment guide (Vercel frontend + Render backend + MongoDB Atlas)
+- [X] T155 [P] Add `client/vercel.json` with SPA rewrite rule: `{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }` for React Router compatibility on Vercel
+- [X] T156 [P] Add `start` script to `server/package.json`: `"start": "node server.js"` for Render/Railway production deployment
 - [ ] T157 [P] Verify full local setup from scratch: follow `quickstart.md` steps verbatim, confirm app runs at `http://localhost:5173`, register account, reach dashboard
-- [ ] T157B [P] *(Optional)* Create `server/src/scripts/seed.js` — connects to MongoDB, creates default admin (`admin@leadflow.ai` / `admin123456`) and test user (`user@leadflow.ai` / `user123456`) if they don't already exist; add `"seed": "node src/scripts/seed.js"` to `server/package.json` scripts (referenced in `quickstart.md` step 7)
+- [X] T157B [P] *(Optional)* Create `server/src/scripts/seed.js` — connects to MongoDB, creates default admin (`admin@leadflow.ai` / `admin123456`) and test user (`user@leadflow.ai` / `user123456`) if they don't already exist; add `"seed": "node src/scripts/seed.js"` to `server/package.json` scripts (referenced in `quickstart.md` step 7)
 
 ### Manual Testing Checklists (Task Group 20)
 
-- [ ] T158 [P] Write `docs/testing/auth-tests.md` — manual test steps for: register valid, register duplicate email, login correct, login wrong password, access protected route without token, role scoping (admin vs user)
-- [ ] T159 [P] Write `docs/testing/leads-tests.md` — test steps for: create missing fields, negative budget, create valid, list with search/filter/pagination, edit status, delete with/without confirmation, role scoping
-- [ ] T160 [P] Write `docs/testing/ai-tests.md` — test steps for: score Hot/Warm/Cold leads per rule criteria, generate follow-up message (copy/regenerate), AI failure fallback
-- [ ] T161 [P] Write `docs/testing/quotations-tests.md` — test steps for: create with duplicate code, negative unitPrice, auto total calculation, edit Accepted (expect blocked), delete non-Draft (expect blocked), accept + mark lead Won
-- [ ] T162 [P] Write `docs/testing/tasks-tests.md` — test steps for: create task today/yesterday, today section, overdue section, mark complete (removed from view), role scoping
-- [ ] T163 [P] Write `docs/testing/dashboard-tests.md` — test steps for: all 12 metric cards correct values, all 4 charts render, role-scoped metrics, empty state (zero values)
+- [X] T158 [P] Write `docs/testing/auth-tests.md` — manual test steps for: register valid, register duplicate email, login correct, login wrong password, access protected route without token, role scoping (admin vs user)
+- [X] T159 [P] Write `docs/testing/leads-tests.md` — test steps for: create missing fields, negative budget, create valid, list with search/filter/pagination, edit status, delete with/without confirmation, role scoping
+- [X] T160 [P] Write `docs/testing/ai-tests.md` — test steps for: score Hot/Warm/Cold leads per rule criteria, generate follow-up message (copy/regenerate), AI failure fallback
+- [X] T161 [P] Write `docs/testing/quotations-tests.md` — test steps for: create with duplicate code, negative unitPrice, auto total calculation, edit Accepted (expect blocked), delete non-Draft (expect blocked), accept + mark lead Won
+- [X] T162 [P] Write `docs/testing/tasks-tests.md` — test steps for: create task today/yesterday, today section, overdue section, mark complete (removed from view), role scoping
+- [X] T163 [P] Write `docs/testing/dashboard-tests.md` — test steps for: all 12 metric cards correct values, all 4 charts render, role-scoped metrics, empty state (zero values)
 - [ ] T164 Final end-to-end test: complete the full sales flow — register → create lead → analyze (AI score) → create quotation → accept quotation → lead marked Won → verify dashboard metrics update
 
 ---
